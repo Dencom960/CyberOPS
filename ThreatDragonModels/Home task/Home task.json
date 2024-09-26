@@ -16,11 +16,318 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 630,
+              "y": 120
+            },
+            "size": {
+              "width": 580,
+              "height": 310
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Зона безопасности"
+              }
+            },
+            "id": "e814012f-8773-4038-ad53-0a974a6b69d7",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Зона безопасности",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 735,
+              "y": 155
+            },
+            "size": {
+              "width": 370,
+              "height": 240
+            },
+            "attrs": {
+              "text": {
+                "text": "Форма авторизации"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "e6f81cb0-6058-48a5-ac1c-13e0e2677a0c",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.Process",
+              "name": "Форма авторизации",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "3f3e3fa5-1993-4ec4-87a1-70e9526b0576",
+                  "title": "Угроза нахождения служебного пароля в структуре страницы",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В разметке страницы в закомментированном или явном виде может располагаться служебный пароль например от учётной записи администратора",
+                  "mitigation": "D - 10\nR - 10\nE - 10\nA - 8\nD - 5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "43"
+                },
+                {
+                  "id": "383899e3-830c-4d68-a5d8-09e0aa161258",
+                  "title": "Угроза безпрепятственного доступа в силу отсутствия базы паролей",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В случае если база паролей не подгружена или настроена некорректно есть вероятность срабатывали беспарольного доступа к любой учётной записи",
+                  "mitigation": "D - 10\nR - 10\nE - 10\nA - 10\nD - 10",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "50"
+                },
+                {
+                  "id": "fac286f6-6972-4bc8-92f4-15feeb3cea39",
+                  "title": "Угроза доступа к базе паролей",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В случае хранения паролей в открытом виде в базе, которая ни как не зашифрована, есть вероятность доступа к этой информации со стороны злоумышленника",
+                  "mitigation": "D - 10\nR - 7,5\nE - 10\nA - 10\nD - 5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "42,5"
+                },
+                {
+                  "id": "b9cf08b4-db3d-4c52-910f-cccc0cf7fec5",
+                  "title": "Некорректная форма восстановления пароля",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В том случае, если скрипт восстановления пароля отправляет на почту пароль от учётной записи, есть вероятность подмены этой почты на почту злоумышленника",
+                  "mitigation": "D - 8\nR - 7,5\nE - 10\nA - 6\nD - 5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "36,5"
+                },
+                {
+                  "id": "a6063e9b-afa8-4c43-bd3b-982af0849541",
+                  "title": "Угроза восстановления пароля из зашифрованного вида",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "В том случае, если используются примитивные методы шифрования или алгоритмы на коротких ключах есть возможность восстановить пароль путём его подбора",
+                  "mitigation": "D - 10\nR - 5\nE - 5\nA - 10\nD - 5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "35"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 14,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1080,
+              "y": 350
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Сервисы"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "54ecf631-1763-4ccb-a70c-73ecc58656d7",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Store",
+              "name": "Сервисы",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 386.5,
+              "y": 119.99999999999997
+            },
+            "size": {
+              "width": 170,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Злоумышленник"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "fdb817bc-eacb-4a98-9e4b-01fbd66611b0",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Злоумышленник",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ade29e81-9ed2-4113-b85c-e69dc6182a3d",
+            "source": {
+              "x": 557,
+              "y": 140
+            },
+            "target": {
+              "cell": "e6f81cb0-6058-48a5-ac1c-13e0e2677a0c"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 160
+              },
+              {
+                "x": 680,
+                "y": 240
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "c4ed750c-7318-4d49-a2b3-4379b7985568",
+            "source": {
+              "cell": "e6f81cb0-6058-48a5-ac1c-13e0e2677a0c"
+            },
+            "target": {
+              "cell": "54ecf631-1763-4ccb-a70c-73ecc58656d7"
+            },
+            "vertices": [
+              {
+                "x": 1120,
+                "y": 180
+              }
+            ]
+          }
+        ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 5
   }
 }

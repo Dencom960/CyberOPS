@@ -32,8 +32,8 @@
                 "text": "Зона безопасности"
               }
             },
-            "id": "e814012f-8773-4038-ad53-0a974a6b69d7",
             "zIndex": -1,
+            "id": "e814012f-8773-4038-ad53-0a974a6b69d7",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Зона безопасности",
@@ -63,8 +63,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "e6f81cb0-6058-48a5-ac1c-13e0e2677a0c",
             "zIndex": 0,
+            "id": "e6f81cb0-6058-48a5-ac1c-13e0e2677a0c",
             "data": {
               "type": "tm.Process",
               "name": "Форма авторизации",
@@ -177,8 +177,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "54ecf631-1763-4ccb-a70c-73ecc58656d7",
             "zIndex": 1,
+            "id": "54ecf631-1763-4ccb-a70c-73ecc58656d7",
             "data": {
               "type": "tm.Store",
               "name": "Сервисы",
@@ -215,8 +215,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "fdb817bc-eacb-4a98-9e4b-01fbd66611b0",
             "zIndex": 2,
+            "id": "fdb817bc-eacb-4a98-9e4b-01fbd66611b0",
             "data": {
               "type": "tm.Actor",
               "name": "Злоумышленник",
